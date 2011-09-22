@@ -1,7 +1,28 @@
+# *******************************************************************
+
 ifeq ($(BR2_TARGET_OPENDINGUX),y)
+OPENDINGUX_PATH:=target/device/opendingux
 
-ifeq ($(BR2_TARGET_OPENDINGUX_A320),y)
-include target/device/opendingux/a320/Makefile.in
+BOARD_NAME:=$(call qstrip,$(BR2_BOARD_NAME))
+BOARD_PATH:=$(call qstrip,$(BR2_BOARD_PATH))
+
+OPENDINGUX_TARGET:=$(OPENDINGUX_PATH)/root
+TARGET_SKELETON:=$(OPENDINGUX_TARGET)/target_skeleton
+TARGET_SKELETON_LINKS:=$(OPENDINGUX_TARGET)/skel.tar.gz
+
+# Update things in board specific makefiles
+include target/device/opendingux/*/Makefile.in
+
 endif
 
-endif
+
+#ifeq ($(BR2_TARGET_OPENDINGUX),y)
+
+#ifeq ($(BR2_TARGET_OPENDINGUX_A320),y)
+#include target/device/opendingux/a320/Makefile.in
+#endif
+#ifeq ($(BR2_TARGET_OPENDINGUX_SPICA),y)
+#include target/device/opendingux/spica/Makefile.in
+#endif
+
+#endif
