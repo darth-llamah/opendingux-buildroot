@@ -47,6 +47,12 @@ config BR2_LINUX_KERNEL_CUSTOM_TARBALL
 	  This option allows to specify the http or ftp location of a
 	  specific kernel source tarball
 
+config BR2_LINUX_KERNEL_CUSTOM_GIT
+	bool "Custom Git tree"
+	help
+	  This option allows Buildroot to get the Linux kernel source
+	  code from a Git repository.
+
 endchoice
 
 config BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE
@@ -57,6 +63,10 @@ config BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE
 config BR2_LINUX_KERNEL_CUSTOM_TARBALL_LOCATION
 	string "URL of custom kernel tarball"
 	depends on BR2_LINUX_KERNEL_CUSTOM_TARBALL
+
+config BR2_LINUX_KERNEL_CUSTOM_GIT_REPO_URL
+	string "URL of custom Git repository"
+	depends on BR2_LINUX_KERNEL_CUSTOM_GIT
 
 config BR2_LINUX_KERNEL_VERSION
 	string

@@ -1,10 +1,10 @@
 #
 # Automatically generated make config: don't edit
 # Version: 0.9.30
-# Mon Nov 17 10:32:53 2008
+# Fri Nov 21 09:26:34 2008
 #
 # TARGET_alpha is not set
-TARGET_arm=y
+# TARGET_arm is not set
 # TARGET_avr32 is not set
 # TARGET_bfin is not set
 # TARGET_cris is not set
@@ -26,17 +26,17 @@ TARGET_arm=y
 # TARGET_sparc is not set
 # TARGET_v850 is not set
 # TARGET_vax is not set
-# TARGET_x86_64 is not set
+TARGET_x86_64=y
 # TARGET_xtensa is not set
 
 #
 # Target Architecture Features and Options
 #
-TARGET_ARCH="arm"
+TARGET_ARCH="x86_64"
 FORCE_OPTIONS_FOR_ARCH=y
-CONFIG_ARM_OABI=y
+# CONFIG_ARM_OABI is not set
 # CONFIG_ARM_EABI is not set
-CONFIG_GENERIC_ARM=y
+# CONFIG_GENERIC_ARM is not set
 # CONFIG_ARM610 is not set
 # CONFIG_ARM710 is not set
 # CONFIG_ARM7TDMI is not set
@@ -54,32 +54,25 @@ CONFIG_GENERIC_ARM=y
 # CONFIG_ARM_SA1100 is not set
 # CONFIG_ARM_XSCALE is not set
 # CONFIG_ARM_IWMMXT is not set
-# CONFIG_MIPS_O32_ABI is not set
-# CONFIG_MIPS_N32_ABI is not set
-# CONFIG_MIPS_N64_ABI is not set
-# CONFIG_MIPS_ISA_1 is not set
-# CONFIG_MIPS_ISA_2 is not set
-# CONFIG_MIPS_ISA_3 is not set
-# CONFIG_MIPS_ISA_4 is not set
-# CONFIG_MIPS_ISA_MIPS32 is not set
-# CONFIG_MIPS_ISA_MIPS32R2 is not set
-# CONFIG_MIPS_ISA_MIPS64 is not set
 TARGET_SUBARCH=""
 
 #
 # Using ELF file format
 #
-ARCH_ANY_ENDIAN=y
-ARCH_BIG_ENDIAN=y
-ARCH_WANTS_BIG_ENDIAN=y
+ARCH_LITTLE_ENDIAN=y
+# ARCH_WANTS_BIG_ENDIAN is not set
 # ARCH_WANTS_LITTLE_ENDIAN is not set
+
+#
+# Using Little Endian
+#
 ARCH_HAS_MMU=y
 ARCH_USE_MMU=y
 UCLIBC_HAS_FLOATS=y
-# UCLIBC_HAS_FPU is not set
-UCLIBC_HAS_SOFT_FLOAT=y
+UCLIBC_HAS_FPU=y
 DO_C99_MATH=y
 UCLIBC_HAS_FENV=y
+UCLIBC_HAS_LONG_DOUBLE_MATH=y
 KERNEL_HEADERS="/usr/include"
 HAVE_DOT_CONFIG=y
 
@@ -227,7 +220,6 @@ DEVEL_PREFIX="/usr/$(TARGET_ARCH)-linux-uclibc/usr/"
 #
 # Security options
 #
-# UCLIBC_BUILD_PIE is not set
 # UCLIBC_HAS_ARC4RANDOM is not set
 # HAVE_NO_SSP is not set
 # UCLIBC_HAS_SSP is not set

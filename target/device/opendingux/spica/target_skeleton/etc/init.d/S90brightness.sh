@@ -4,7 +4,7 @@
 #
 
 STATEFILE=/etc/local/brightness.state
-SYSFSFILE=/sys/class/backlight/pwm-backlight/brightness
+SYSFSFILE=/sys/class/backlight/s6d05a-lcd/brightness
 
 case "$1" in
 	start)
