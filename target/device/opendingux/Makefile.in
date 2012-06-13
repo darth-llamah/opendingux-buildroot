@@ -21,8 +21,8 @@ endif
 #ifeq ($(BR2_TARGET_OPENDINGUX_A320),y)
 #include target/device/opendingux/a320/Makefile.in
 #endif
-#ifeq ($(BR2_TARGET_OPENDINGUX_SPICA),y)
-#include target/device/opendingux/spica/Makefile.in
+#ifeq ($(BR2_TARGET_OPENDINGUX_CAANOO),y)
+#include target/device/opendingux/caanoo/Makefile.in
 #endif
 
 #endif

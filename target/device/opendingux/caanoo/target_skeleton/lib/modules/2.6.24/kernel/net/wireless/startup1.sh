@@ -1,0 +1,1 @@
+/mnt/ubifs/usr/gp2x/startup1.sh

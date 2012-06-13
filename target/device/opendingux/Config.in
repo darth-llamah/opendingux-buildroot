@@ -20,11 +20,12 @@ config BR2_TARGET_OPENDINGUX_A320
 	help
 	  OpenDingux on the Dingoo Digital A320 and Dingoo Technology A330.
 
-config BR2_TARGET_OPENDINGUX_SPICA
-	bool "gt-i5700/Spica"
-	depends on BR2_arm && BR2_arm1176jzf_s
+config BR2_TARGET_OPENDINGUX_CAANOO
+	bool "GPH Caanoo"
+	depends on BR2_arm && BR2_arm926t
 	help
-	  OpenDingux on the Samsung Spica (FTW!)
+	  OpenDingux on the GPH Caanoo
+
 endchoice
 
 endif
