@@ -44,7 +44,7 @@ EXTRA_GCC_CONFIG_OPTIONS+=--with-pkgversion="Buildroot $(BR2_VERSION_FULL)" \
 endif
 
 # http://gcc.gnu.org/bugzilla/show_bug.cgi?id=43810
-# Workaround until it's fixed in 4.5.2 or later
+# Workaround until it's fixed in 4.5.4 or later
 ifeq ($(ARCH),powerpc)
 ifeq ($(findstring x4.5.,x$(GCC_VERSION)),x4.5.)
 GCC_OPTSPACE=--disable-target-optspace
@@ -123,6 +123,12 @@ endif
 
 # GCC 4.6.x prerequisites
 ifeq ($(findstring x4.6.,x$(GCC_VERSION)),x4.6.)
+GCC_WITH_HOST_MPC=--with-mpc=$(MPC_HOST_DIR)
+HOST_SOURCE += host-libmpc-source
+endif
+
+# GCC 4.7.x prerequisites
+ifeq ($(findstring x4.7.,x$(GCC_VERSION)),x4.7.)
 GCC_WITH_HOST_MPC=--with-mpc=$(MPC_HOST_DIR)
 HOST_SOURCE += host-libmpc-source
 endif
